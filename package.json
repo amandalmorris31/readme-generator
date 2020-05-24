@@ -1,0 +1,22 @@
+{
+  "name": "readme-generator-1",
+  "version": "1.0.0",
+  "description": "this is the readme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "GitHub",
+    "readme",
+    "generator"
+  ],
+  "author": "Amanda Morris",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "inquirer": "^7.1.0",
+    "util": "^0.12.3"
+  }
+}
