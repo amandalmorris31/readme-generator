@@ -2,13 +2,17 @@
 //(shields.io)
 
 function generateMarkdown(userObj) {
+  console.log(userObj);
   return `
-# ${userObj.username}
+# USERNAME
+${userObj.username}
 ![Image of Github user](${userObj.githubIcon})
 
-# ${userObj.projectname} 
+# PROJECT NAME
+${userObj.projectname} 
 
-# ${userObj.projectdescription}
+# DESCRIPTION
+${userObj.projectdescription}
 
 ## Table of Contents
 
@@ -16,17 +20,21 @@ function generateMarkdown(userObj) {
 * [Usage](#usage)
 * [Credits](#credits)
 * [License](#license)
+* [Badges](#badges)
 
+## INSTALLATION
+${userObj.projectinstallation}
 
-## ${userObj.projectinstallation}
+## USAGE
+${userObj.projectusage}
 
-## ${userObj.projectusage}
+## CREDITS
+${userObj.projectcredits}
 
-## ${userObj.projectcredits}
+## LICENSE
+${userObj.projectlicense}
 
-## ${userObj.projectlicense}
-
-The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
+If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
 
 ---
 
@@ -35,14 +43,14 @@ The last section of a good README is a license. This lets other developers know 
 
 ## Badges
 
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) 
 
-Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+
 
 
 ## Contributing
 
-If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
+The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
 
 ## Tests
 

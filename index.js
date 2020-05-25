@@ -78,7 +78,7 @@ function init() {
       projectinstallation:projectinstallation,
       projectusage:projectusage,
       projectcredits:projectcredits,
-      projectcredits:projectlicense
+      projectlicense:projectlicense
     }
     //2. from user input (github acct) get github profile pic
     const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
