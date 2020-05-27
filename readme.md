@@ -3,38 +3,36 @@
 ## Badge
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-# PROJECT TITLE
+# Project Title
 SuperProject 
 
-# DESCRIPTION
-This is a description of my project to create a readme file
+# Description
+This is a description: Use this to generate a readme file for GitHub
 
 ## Table of Contents
 
-* [Badges](#badges)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
+* [Badge](#Badge)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributors](#Contributors)
 
-
-## INSTALLATION
+## Installation
 Step 1: Do this  Step 2: Do that
 
-## USAGE
-Here are some instructions.  This creates a readme file
+## Usage
+Here are some instructions on using this project.  It creates a readme file.
 
-## CREDITS
-Joyce and Terry Paul and Molly
-
-## LICENSE
+## License
 The Unlicense
 
-## Contributing
+## Contributors / Credits
+Joyce and Terry, Paul and Molly
 
-The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
-
-# USERNAME
+# Username
 amandalmorris31
 ![Image of Github user](https://avatars0.githubusercontent.com/u/57371259?v=4)
+
+## Email
+amandahenry2@comcast.net
 

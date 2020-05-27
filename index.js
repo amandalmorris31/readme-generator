@@ -3,7 +3,6 @@ const axios = require("axios");
 const generateMarkdown = require("./utils/generateMarkdown");
 const fs = require("fs");
 const util = require("util");
-
 const writeFileAsync = util.promisify(fs.writeFile);
 
 const questions = [
@@ -25,13 +24,8 @@ const questions = [
   },
   {
     type: "input",
-    message: "Please provide instructions and examples for use, including screenshots",
+    message: "Please provide instructions and examples for use, including screenshots.",
     name: "projectusage"
-  },
-  {
-    type: "input",
-    message: "Please provide a list of collaborators, and links to tutorials you may have followed",
-    name: "projectcredits"
   },
   {
     type: "list",
@@ -41,20 +35,27 @@ const questions = [
   },
   {
     type: "input",
+    message: "Please provide a list of collaborators, and links to tutorials you may have followed",
+    name: "projectcontributors"
+  },
+
+  {
+    type: "input",
     message: "What is your GitHub user name?",
     name: "username"
   },
 
+  {
+    type: "input",
+    message: "What is your preferred email address?",
+    name: "email"
+  },
+
   //Also need to ask about
-  //A GitHub badge
-  //Table of Contents
-  
   //Tests
   //Questions, as follows:
   //GitHub(acct => json file, navigate to find profile pic) profile photo
-  // email
-
-
+  
 ];
 
 function writeToFile(fileName, data) {
@@ -64,12 +65,12 @@ function init() {
   //1. ask for user input
 
   inquirer.prompt(questions)
-  .then(function({username, projectname, projectdescription, projectinstallation, projectusage, projectcredits, projectlicense}){
+  .then(function({projectname, projectdescription, projectinstallation, projectusage, projectcontributors, projectlicense, username, email}){
     //const projectname = answers.projectname
     //const projectdescription = projectdescription
     //const projectinstallation = projectinstallation
     //const projectusage = projectusage
-    //const projecctcredits = projectcredits
+    //const projecctcontributors = projectcontributors
     //const projectlicense = projectlicense
     //const username = answers.username
     var userObj={
@@ -77,9 +78,10 @@ function init() {
       projectdescription:projectdescription,
       projectinstallation:projectinstallation,
       projectusage:projectusage,
-      projectcredits:projectcredits,
+      projectcontributors:projectcontributors,
       projectlicense:projectlicense,
-      username:username
+      username:username,
+      email:email,
     }
     //2. from user input (github acct) get github profile pic
     const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;

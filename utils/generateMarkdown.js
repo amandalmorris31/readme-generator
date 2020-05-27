@@ -1,44 +1,41 @@
 function generateMarkdown(userObj) {
   console.log(userObj);
   return `
-
 ## Badge
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 
-# PROJECT TITLE
+# Project Title
 ${userObj.projectname} 
 
-# DESCRIPTION
+# Description
 ${userObj.projectdescription}
 
 ## Table of Contents
 
-* [Badges](#badges)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
+* [Badge](#Badge)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributors](#Contributors)
 
-
-## INSTALLATION
+## Installation
 ${userObj.projectinstallation}
 
-## USAGE
+## Usage
 ${userObj.projectusage}
 
-## CREDITS
-${userObj.projectcredits}
-
-## LICENSE
+## License
 ${userObj.projectlicense}
 
-## Contributing
+## Contributors / Credits
+${userObj.projectcontributors}
 
-The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
-
-# USERNAME
+# Username
 ${userObj.username}
 ![Image of Github user](${userObj.githubIcon})
+
+## Email
+${userObj.email}
 
 `;
 }
