@@ -7,14 +7,10 @@ const util = require("util");
 const writeFileAsync = util.promisify(fs.writeFile);
 
 const questions = [
+
   {
     type: "input",
-    message: "What is your GitHub user name?",
-    name: "username"
-  },
-  {
-    type: "input",
-    message: "What is your project's name?",
+    message: "What is your project's name/title?",
     name: "projectname"
   },
   {
@@ -43,6 +39,11 @@ const questions = [
     name: "projectlicense",
     choices: ['GNU AGPLv3', 'GNU GPLv3','GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'BoostSoftwareLicense 1.0', 'The Unlicense']
   },
+  {
+    type: "input",
+    message: "What is your GitHub user name?",
+    name: "username"
+  },
 
   //Also need to ask about
   //A GitHub badge
@@ -64,21 +65,21 @@ function init() {
 
   inquirer.prompt(questions)
   .then(function({username, projectname, projectdescription, projectinstallation, projectusage, projectcredits, projectlicense}){
-    //const username = answers.username
     //const projectname = answers.projectname
     //const projectdescription = projectdescription
     //const projectinstallation = projectinstallation
     //const projectusage = projectusage
     //const projecctcredits = projectcredits
     //const projectlicense = projectlicense
+    //const username = answers.username
     var userObj={
-      username:username,
       projectname:projectname,
       projectdescription:projectdescription,
       projectinstallation:projectinstallation,
       projectusage:projectusage,
       projectcredits:projectcredits,
-      projectlicense:projectlicense
+      projectlicense:projectlicense,
+      username:username
     }
     //2. from user input (github acct) get github profile pic
     const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
