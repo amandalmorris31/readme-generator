@@ -38,22 +38,22 @@ const questions = [
     message: "Please provide a list of collaborators, and links to tutorials you may have followed",
     name: "projectcontributors"
   },
-
+  {
+    type: "input",
+    message: "What kind of tests can you run on this project?",
+    name: "projecttests"
+  },
   {
     type: "input",
     message: "What is your GitHub user name?",
     name: "username"
   },
-
   {
     type: "input",
     message: "What is your preferred email address?",
     name: "email"
   },
 
-  //Also need to ask about
-  //Tests
-  //Questions, as follows:
   //GitHub(acct => json file, navigate to find profile pic) profile photo
   
 ];
@@ -65,21 +65,24 @@ function init() {
   //1. ask for user input
 
   inquirer.prompt(questions)
-  .then(function({projectname, projectdescription, projectinstallation, projectusage, projectcontributors, projectlicense, username, email}){
+  .then(function({projectname, projectdescription, projectinstallation, projectusage, projectlicense, projectcontributors, projecttests, username, email}){
     //const projectname = answers.projectname
     //const projectdescription = projectdescription
     //const projectinstallation = projectinstallation
     //const projectusage = projectusage
-    //const projecctcontributors = projectcontributors
     //const projectlicense = projectlicense
+    //const projecctcontributors = projectcontributors
+    //const projecttests = projecttests
     //const username = answers.username
+    //const email = email
     var userObj={
       projectname:projectname,
       projectdescription:projectdescription,
       projectinstallation:projectinstallation,
       projectusage:projectusage,
-      projectcontributors:projectcontributors,
       projectlicense:projectlicense,
+      projectcontributors:projectcontributors,
+      projecttests:projecttests,
       username:username,
       email:email,
     }
@@ -107,7 +110,6 @@ function init() {
 
     });
     //4. create a readme file
-
 
   });
 

@@ -30,7 +30,10 @@ ${userObj.projectlicense}
 ## Contributors / Credits
 ${userObj.projectcontributors}
 
-# Username
+## Tests
+${userObj.projecttests}
+
+## Username and photo
 ${userObj.username}
 ![Image of Github user](${userObj.githubIcon})
 
